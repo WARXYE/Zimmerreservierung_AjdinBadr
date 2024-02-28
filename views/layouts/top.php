@@ -40,7 +40,7 @@ $path = pathinfo($_SERVER['REQUEST_URI'], PATHINFO_DIRNAME);
             <ul class="nav navbar-nav">
                 <li><a href="#">Reservierungen</a></li>
                 <li><a href="#">Gäste</a></li>
-                <li <?= contains($path, "index") ? 'class="active"' : '' ?>><a href="#">Zimmer</a></li>
+                <li <?= contains($path, "index") ? 'class="active"' : '' ?>><a href="/SWPP/Zimmerreservierung_AjdinBadr/Zimmerreservierung_AjdinBadr/views/room/index.php">Zimmer</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#">Hilfe</a></li>

@@ -1,6 +1,21 @@
 <?php
 $title = "Zimmer erstellen";
 include '../layouts/top.php';
+include '../../models/Zimmer.php';
+
+if(isset($_POST["submit"])){
+    $neuesZimmer = new Zimmer();
+
+    $neuesZimmer->setNr(isset($_POST["nr"])?$_POST["nr"]:null);
+    $neuesZimmer->setName(isset($_POST["name"])?$_POST["name"]:null);
+    $neuesZimmer->setPersonen(isset($_POST["size"])?$_POST["size"]:null);
+    $neuesZimmer->setPreis(isset($_POST["price"])?$_POST["price"]:null);
+    $neuesZimmer->setBalkon(isset($_POST["balcony"]));
+
+    if ($neuesZimmer->save()){
+        header("Location:view.php?nr=".$_POST["nr"]);
+    }
+}
 ?>
 
     <div class="container">

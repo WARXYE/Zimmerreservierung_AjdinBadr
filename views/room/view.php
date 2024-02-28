@@ -1,6 +1,16 @@
 <?php
 $title = "Zimmer anzeigen";
 include '../layouts/top.php';
+include_once '../../models/Zimmer.php';
+
+if (empty($_GET["nr"])){
+    header("Location: index.php");
+}else if (!is_numeric($_GET['nr'])) {
+    http_response_code(400);
+    die();
+}else{
+    $zimmer = Zimmer::get($_GET["nr"]);
+}
 ?>
 
     <div class="container">
@@ -16,23 +26,23 @@ include '../layouts/top.php';
             <tbody>
             <tr>
                 <th>Zimmernummer</th>
-                <td>01</td>
+                <td><?= $zimmer->getNr()?></td>
             </tr>
             <tr>
                 <th>Name</th>
-                <td>Tres-Zap</td>
+                <td><?= $zimmer->getName()?></td>
             </tr>
             <tr>
                 <th>Personen</th>
-                <td>4</td>
+                <td><?= $zimmer->getPersonen()?></td>
             </tr>
             <tr>
                 <th>Preis</th>
-                <td>€57,75</td>
+                <td><?= $zimmer->getPreis()?>€</td>
             </tr>
             <tr>
                 <th>Balkon</th>
-                <td>JA</td>
+                <td><?= $zimmer->getBalkon()?></td>
             </tr>
             </tbody>
         </table>

@@ -2,7 +2,7 @@
 
 class Database
 {
-    private static $dbName = 'php33';
+    private static $dbName = 'zimmerresavierung';
     private static $dbHost = 'localhost';
     private static $dbUsername = 'root';
     private static $dbUserPassword = '';
