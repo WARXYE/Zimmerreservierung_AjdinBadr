@@ -1,6 +1,9 @@
 <?php
 $title = "Zimmerverwaltung";
 include '../layouts/top.php';
+include "../../models/Zimmer.php";
+$z = Zimmer::getAll();
+
 ?>
 
     <div class="container">
@@ -24,75 +27,34 @@ include '../layouts/top.php';
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
-                    <td>01</td>
-                    <td>Tres-Zap</td>
-                    <td>4</td>
-                    <td>€57,75</td>
-                    <td>JA</td>
-                    <td><a class="btn btn-info" href="view.php?id=29"><span class="glyphicon glyphicon-eye-open"></span></a>&nbsp;<a
-                                class="btn btn-primary" href="update.php?id=29"><span
-                                    class="glyphicon glyphicon-pencil"></span></a>&nbsp;<a
-                                class="btn btn-danger" href="delete.php?id=29"><span
-                                    class="glyphicon glyphicon-remove"></span></a>
+                <?php
+
+                foreach ($z as $room):
+                    $balkonString = $room->getBalkon() == 1 ? "Besitzt einen Balkon" : "Besitze keinen";
+                    echo "<tr>";
+                    echo "<td>" . $room->getNr() . "</td>";
+                    echo "<td>" . $room->getName() . "</td>";
+                    echo "<td>" . $room->getPersonen() . "</td>";
+                    echo "<td>" . $room->getPreis() . "€</td>";
+                    echo "<td>" . $balkonString . "</td>";
+
+                    ?>
+                    <td>
+                        <a href='updatebetter.php?nr=<?=$room->getNr()?>' class="btn btn-primary">
+                            Bearbeiten
+                        </a>
+                        <a href='view.php?nr=<?=$room->getNr()?>' class="btn btn-primary">
+                            View
+                        </a>
+                        <a href='delete.php?nr=<?=$room->getNr()?>' class=" btn btn-danger">
+                            Delete
+                        </a>
                     </td>
-                </tr>
-                <tr>
-                    <td>01</td>
-                    <td>Tres-Zap</td>
-                    <td>4</td>
-                    <td>€57,75</td>
-                    <td>JA</td>
-                    <td><a class="btn btn-info" href="view.php?id=29"><span class="glyphicon glyphicon-eye-open"></span></a>&nbsp;<a
-                                class="btn btn-primary" href="update.php?id=29"><span
-                                    class="glyphicon glyphicon-pencil"></span></a>&nbsp;<a
-                                class="btn btn-danger" href="delete.php?id=29"><span
-                                    class="glyphicon glyphicon-remove"></span></a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>01</td>
-                    <td>Tres-Zap</td>
-                    <td>4</td>
-                    <td>€57,75</td>
-                    <td>JA</td>
-                    <td><a class="btn btn-info" href="view.php?id=29"><span class="glyphicon glyphicon-eye-open"></span></a>&nbsp;<a
-                                class="btn btn-primary" href="update.php?id=29"><span
-                                    class="glyphicon glyphicon-pencil"></span></a>&nbsp;<a
-                                class="btn btn-danger" href="delete.php?id=29"><span
-                                    class="glyphicon glyphicon-remove"></span></a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>01</td>
-                    <td>Tres-Zap</td>
-                    <td>4</td>
-                    <td>€57,75</td>
-                    <td>JA</td>
-                    <td><a class="btn btn-info" href="view.php?id=29"><span class="glyphicon glyphicon-eye-open"></span></a>&nbsp;<a
-                                class="btn btn-primary" href="update.php?id=29"><span
-                                    class="glyphicon glyphicon-pencil"></span></a>&nbsp;<a
-                                class="btn btn-danger" href="delete.php?id=29"><span
-                                    class="glyphicon glyphicon-remove"></span></a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>01</td>
-                    <td>Tres-Zap</td>
-                    <td>4</td>
-                    <td>€57,75</td>
-                    <td>JA</td>
-                    <td><a class="btn btn-info" href="view.php?id=29"><span class="glyphicon glyphicon-eye-open"></span></a>&nbsp;<a
-                                class="btn btn-primary" href="update.php?id=29"><span
-                                    class="glyphicon glyphicon-pencil"></span></a>&nbsp;<a
-                                class="btn btn-danger" href="delete.php?id=29"><span
-                                    class="glyphicon glyphicon-remove"></span></a>
-                    </td>
-                </tr>
+                <?php endforeach;?>
                 </tbody>
             </table>
         </div>
-    </div> <!-- /container -->
+    </div>
 
 <?php
 include '../layouts/bottom.php';

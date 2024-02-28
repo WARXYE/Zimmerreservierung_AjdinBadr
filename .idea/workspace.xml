@@ -6,12 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="779862c6-57cf-4d44-beb4-efe3e60c1454" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/Database.php" beforeDir="false" afterPath="$PROJECT_DIR$/models/Database.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/layouts/top.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/layouts/top.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/room/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/room/create.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/room/delete.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/room/delete.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/room/view.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/room/view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/room/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/room/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +112,7 @@
       <workItem from="1513667064506" duration="591000" />
       <workItem from="1513669600683" duration="7000" />
       <workItem from="1513670638898" duration="17000" />
-      <workItem from="1709149629058" duration="3037000" />
+      <workItem from="1709149629058" duration="4582000" />
     </task>
     <servers />
   </component>
@@ -151,6 +147,17 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/views/room/view.php</url>
+          <line>28</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/views/room/delete.php">
