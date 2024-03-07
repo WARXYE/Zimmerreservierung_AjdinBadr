@@ -62,14 +62,14 @@ if(isset($_POST["submit"])){
             <div class="col-md-1"></div>
             <div class="col-md-1">
                 <div class="form-group required">
-                    <label class="control-label">Balkon *</label>
+                    <label class="control-label">Balkon</label>
                     <input type="checkbox" class="form-control" name="balcony" value="">
                 </div>
             </div>
             <div class="col-md-5"></div>
         </div>
 
-        <div class="form-group">
+        <div action="create.php" class="form-group">
             <button type="submit" name="submit" class="btn btn-success">Erstellen</button>
             <a class="btn btn-default" href="/index.php">Abbruch</a>
         </div>

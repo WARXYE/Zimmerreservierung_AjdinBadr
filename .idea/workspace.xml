@@ -7,7 +7,6 @@
     <list default="true" id="779862c6-57cf-4d44-beb4-efe3e60c1454" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/room/create.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/room/create.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/room/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/views/room/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +34,9 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
   <component name="ProjectColorInfo">{
@@ -115,7 +117,7 @@
       <workItem from="1709149629058" duration="5253000" />
       <workItem from="1709199674622" duration="641000" />
       <workItem from="1709760931116" duration="2500000" />
-      <workItem from="1709797913130" duration="4912000" />
+      <workItem from="1709797913130" duration="5987000" />
     </task>
     <servers />
   </component>
@@ -155,6 +157,11 @@
           <url>file://$PROJECT_DIR$/views/room/view.php</url>
           <line>28</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/models/Zimmer.php</url>
+          <line>101</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
