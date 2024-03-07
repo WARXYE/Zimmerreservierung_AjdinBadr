@@ -40,7 +40,7 @@ $z = Zimmer::getAll();
 
                     ?>
                     <td>
-                        <a href='updatebetter.php?nr=<?=$room->getNr()?>' class="btn btn-primary">
+                        <a href='update.php?nr=<?=$room->getNr()?>' class="btn btn-primary">
                             Bearbeiten
                         </a>
                         <a href='view.php?nr=<?=$room->getNr()?>' class="btn btn-primary">

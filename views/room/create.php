@@ -15,6 +15,8 @@ if(isset($_POST["submit"])){
     if ($neuesZimmer->save()) {
         header("Location: view.php?nr=" . $neuesZimmer->biggestId()->getNr());
         exit();
+    } else {
+        echo "$neuesZimmer->getErrors()[]";
     }
 }
 ?>
@@ -24,7 +26,7 @@ if(isset($_POST["submit"])){
         <h2><?= $title ?></h2>
     </div>
 
-    <form class="form-horizontal" action="/SWPP/Zimmerreservierung_AjdinBadr/Zimmerreservierung_AjdinBadr/views/room/create.php" method="post">
+    <form class="form-horizontal" method="post">
 
         <div class="row">
             <div class="col-md-2">
@@ -69,7 +71,7 @@ if(isset($_POST["submit"])){
 
         <div class="form-group">
             <button type="submit" name="submit" class="btn btn-success">Erstellen</button>
-            <a class="btn btn-default" href="index.php">Abbruch</a>
+            <a class="btn btn-default" href="/index.php">Abbruch</a>
         </div>
     </form>
 </div> <!-- /container -->
